@@ -31,8 +31,7 @@ body{
 
 .item1{
         display: flex;
-        flex-grow: 1;
-        flex-basis: 0;
+       
         padding-top: 50px;
         padding-bottom: 50px;
         background-color: #1F2937;
@@ -40,20 +39,26 @@ body{
         padding-right: 100px;
 }
 .item1 > div{
-        padding: 10px;
+        padding: 10px; 
+        flex-grow: 1;
+        flex-basis: 0;
+}
+.item1-image > img{
+        flex-grow: 1;
+        flex-basis: 0;
+        max-width: 100%;
 }
 .item1-1{
         display: flex;
         flex-direction:column;
+        
 }
 .item1-image{
         display: flex;
         justify-content: center;
-        width: 100%;
 }
 
-.item1-image > div >img {
-        max-width:400px;
+.item1-image >img {
         max-height: 400px;
         object-fit: contain;
         margin: 0;
