@@ -1,3 +1,7 @@
+html,body {
+        margin:0;
+        padding:0;
+    }
 body{
         font-family: "Roboto";
 }
@@ -15,10 +19,14 @@ body{
         padding-right: 100px;
 }
 .header-link{
-        margin-right: 10px;
+        margin-right: 20px;
+}
+.header-link-text{
+        font-size: 25px;
 }
 .header-1{
         flex-grow: 3;
+        font-size: 40px;
 }
 
 .item1{
@@ -40,8 +48,16 @@ body{
 }
 .item1-image{
         display: flex;
+        justify-content: center;
+        width: 100%;
 }
 
+.item1-image > div >img {
+        max-width:400px;
+        max-height: 400px;
+        object-fit: contain;
+        margin: 0;
+    }
 
 .item2{
         display: flex;
@@ -83,6 +99,7 @@ body{
         border-radius: 10px;
         padding-left: 100px;
         padding-right: 100px;
+        
 }
 
 .item3-quote{
@@ -110,7 +127,7 @@ body{
 .item4-text1{
         
         font-weight: bold;
-        font-size: 18px;
+        font-size: 50px;
 }
 .item4-button{
         display: flex;
