@@ -11,25 +11,26 @@ body{
         flex-direction: column;
 }
 
-.header{
+header{
         display: flex;
         background-color: #1F2937;
         color: #F9FAF8;
         padding-left: 100px;
         padding-right: 100px;
 }
-.header-link{
-        margin-right: 20px;
-}
-.header-link-text{
-        font-size: 25px;
-}
-.header-1{
+
+.header{
         flex-grow: 3;
         font-size: 40px;
 }
 
-.item1{
+.header-links{
+        font-size: 25px;
+        display: flex;
+        gap:20px;
+}
+
+.hero{
         display: flex;
        
         padding-top: 50px;
@@ -38,48 +39,48 @@ body{
         padding-left: 100px;
         padding-right: 100px;
 }
-.item1 > div{
+.hero > div{
         padding: 10px; 
         flex-grow: 1;
         flex-basis: 0;
 }
-.item1-image > img{
+.hero-image > img{
         flex-grow: 1;
         flex-basis: 0;
         max-width: 100%;
 }
-.item1-1{
+.hero-text{
         display: flex;
         flex-direction:column;
         
 }
-.item1-image{
+.hero-image{
         display: flex;
         justify-content: center;
 }
 
-.item1-image >img {
+.hero-image >img {
         max-height: 400px;
         object-fit: contain;
         margin: 0;
     }
 
-.item2{
+.info{
         display: flex;
         flex-direction: column;
         padding-left: 100px;
         padding-right: 100px;
 }
 
-.item2-heading{
+.info-text{
         display: flex;
         font-weight: bold;
         justify-content: center;
 }
-.item2-images{
+.info-images{
         display: flex;
 }
-.item2-images > div{
+.info-images > div{
         flex-grow: 1;
         border: 2px solid #3882F6;
         border-radius: 10px;
@@ -88,16 +89,16 @@ body{
         height: 100px;
         width: 100px;
 }
-.item2-text{
+.info-images-description{
         display: flex;
 }
-.item2-text > div{
+.info-images-description > div{
         flex-grow: 1;
         border-radius: 2px;
         padding: 10px;
         margin: 10px;
 }
-.item3{
+.quote{
         display: flex;
         flex-direction: column;
         background-color: #E5E7EB;
@@ -107,14 +108,14 @@ body{
         
 }
 
-.item3-quote{
+.quote-author{
         display: flex;
         justify-content: end;
         font-weight: bold;
         padding: 10px;
 }
 
-.item4{
+.action{
         display: flex;
         padding: 50px;
         border: 50px solid #f9f9f9;
@@ -125,22 +126,17 @@ body{
         padding-right: 100px;
 }
 
-.item4-text{
+.action-text{
         display: flex;
         flex-direction: column;
 }
-.item4-text1{
-        
-        font-weight: bold;
-        font-size: 50px;
-}
-.item4-button{
+.action-button{
         display: flex;
         flex-grow: 1;
         justify-content: center;
         align-items: center;
 }
-.item5{
+.copyright{
         display: flex;
         justify-content: center;
         background-color: #1F2937;
