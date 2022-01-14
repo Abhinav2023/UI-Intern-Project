@@ -5,12 +5,12 @@ function computerPlay(){
         else return "paper";
 }
 
-let playerWinCount=0;
+let playerWinCount=0,computerWinCount=0;
 function playRound(playerSelection,computerSelection){
         if(playerSelection===computerSelection) return "Draw";
         if(playerSelection==="rock"){
                 if(computerSelection==='paper'){
-                        playerWinCount--;
+                        computerWinCount++;
                         return "Computer Win";
                 } 
                 else{
@@ -23,7 +23,7 @@ function playRound(playerSelection,computerSelection){
                         return "Player Win";
                 }
                 else{
-                        playerWinCount--;
+                        computerWinCount++;
                         return "Computer Win";
                 }
         }else {
@@ -32,21 +32,63 @@ function playRound(playerSelection,computerSelection){
                         return "Player Win";
                 }
                 else{
-                        playerWinCount--;
+                        computerWinCount++;
                         return "Computer Win";
                 }
         }
 }
 
-
-for(let i=0;i<5;i++){
-        let playerSelection =prompt("Please enter your move","rock").toLowerCase();
-        let computerSelection=computerPlay();
-        console.log(computerSelection);
-        console.log(playRound(playerSelection,computerSelection));
+function showResults(){
+        const res=document.querySelector('#result');
+        if(playerWinCount===5){
+                res.textContent="Finally Player Win";
+        }else{
+                res.textContent="Finally Computer Win"
+        }
+        playerWinCount=0,computerWinCount=0;
 }
 
-if(playerWinCount>0){
-        console.log("Finally Player Win");
-}else console.log("Finally Computer Win");
+
+let playerSelection;
+function makeMoveAndShowResult(){
+        let computerSelection=computerPlay();
+        console.log(computerSelection);
+        playRound(playerSelection,computerSelection);
+        const playercnt=document.querySelector('#playerCount');
+        playercnt.textContent="Player - "+playerWinCount;
+        const computercnt=document.querySelector('#computerCount');
+        computercnt.textContent="Computer - "+computerWinCount;
+}
+
+// If Paper is selected
+const btnPaper=document.querySelector('#paper');
+btnPaper.onclick=()=>{
+        playerSelection="paper";
+        makeMoveAndShowResult();
+        if(computerWinCount===5 || playerWinCount===5){
+                showResults();
+        }
+}
+
+// If rock is selected
+const btnRock=document.querySelector('#rock');
+btnRock.onclick=()=>{
+        playerSelection="rock";
+        makeMoveAndShowResult();
+        if(computerWinCount===5 || playerWinCount===5){
+                showResults();
+        }
+}
+
+// If scissor is selected
+const btnScissor=document.querySelector('#scissor');
+btnScissor.onclick=()=>{
+        playerSelection="scissor";
+        makeMoveAndShowResult();
+        if(computerWinCount===5 || playerWinCount===5){
+                showResults();
+        }
+}
+
+
 
