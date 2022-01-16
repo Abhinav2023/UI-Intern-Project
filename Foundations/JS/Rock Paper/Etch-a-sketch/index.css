@@ -1,0 +1,23 @@
+.content{
+        display: flex;;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+}
+
+.row{
+        display: flex;
+        flex-grow: 1;
+        flex-basis: 1;
+        flex-direction: row;
+        align-items: stretch;
+}
+
+.element{
+        flex-grow: 1;
+        flex-basis: 1;
+        
+}
+
+
+
