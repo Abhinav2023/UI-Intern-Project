@@ -23,7 +23,7 @@ body{
         padding: 20px;
 }
 
-.display{
+.calculator-display{
         display: flex;
         background-color: #eee;
         height: 100px;
@@ -35,16 +35,16 @@ body{
         font-size: 60px;
 }
 
-.screen{
+.calculator-screen{
         padding: 15px;
 }
-.numberRows{
+.calculator-rows{
         display:flex;
         flex-direction: row;
         gap: 10px;
 }
 
-.numberRows > div{
+.calculator-rows > div{
         border: 1px solid black;
         height: 100px;
         width: 100px;
@@ -56,15 +56,15 @@ body{
 }
 
 
-.btn{
+.calculator-item{
         background-color: #f6f6f6;
         
 }
 
-.btn-red{
+.calculator-clear{
         background-color: #faa;
 }
 
-.btn-purple{
+.calculator-delete{
         background-color: #aaf;
 }
