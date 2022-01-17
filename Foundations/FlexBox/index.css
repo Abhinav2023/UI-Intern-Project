@@ -1,0 +1,148 @@
+html,body {
+        margin:0;
+        padding:0;
+    }
+body{
+        font-family: "Roboto";
+}
+
+.content{
+        display: flex;
+        flex-direction: column;
+}
+
+header{
+        display: flex;
+        background-color: #1F2937;
+        color: #F9FAF8;
+        padding-left: 100px;
+        padding-right: 100px;
+}
+
+.header{
+        flex-grow: 3;
+        font-size: 40px;
+}
+
+.header-links{
+        font-size: 25px;
+        display: flex;
+        gap:20px;
+}
+
+.hero{
+        display: flex;
+       
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: #1F2937;
+        padding-left: 100px;
+        padding-right: 100px;
+}
+.hero > div{
+        padding: 10px; 
+        flex-grow: 1;
+        flex-basis: 0;
+}
+.hero-image > img{
+        flex-grow: 1;
+        flex-basis: 0;
+        max-width: 100%;
+}
+.hero-text{
+        display: flex;
+        flex-direction:column;
+        
+}
+.hero-image{
+        display: flex;
+        justify-content: center;
+}
+
+.hero-image >img {
+        max-height: 400px;
+        object-fit: contain;
+        margin: 0;
+    }
+
+.info{
+        display: flex;
+        flex-direction: column;
+        padding-left: 100px;
+        padding-right: 100px;
+}
+
+.info-text{
+        display: flex;
+        font-weight: bold;
+        justify-content: center;
+}
+.info-images{
+        display: flex;
+}
+.info-images > div{
+        flex-grow: 1;
+        border: 2px solid #3882F6;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px;
+        height: 100px;
+        width: 100px;
+}
+.info-images-description{
+        display: flex;
+}
+.info-images-description > div{
+        flex-grow: 1;
+        border-radius: 2px;
+        padding: 10px;
+        margin: 10px;
+}
+.quote{
+        display: flex;
+        flex-direction: column;
+        background-color: #E5E7EB;
+        border-radius: 10px;
+        padding-left: 100px;
+        padding-right: 100px;
+        
+}
+
+.quote-author{
+        display: flex;
+        justify-content: end;
+        font-weight: bold;
+        padding: 10px;
+}
+
+.action{
+        display: flex;
+        padding: 50px;
+        border: 50px solid #f9f9f9;
+        background-color: #3882F6;
+        color:#E5E7EB;
+        border-radius: 10px;
+        padding-left: 100px;
+        padding-right: 100px;
+}
+
+.action-text{
+        display: flex;
+        flex-direction: column;
+}
+.action-button{
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+}
+.copyright{
+        display: flex;
+        justify-content: center;
+        background-color: #1F2937;
+        color: #F9FAF8;
+        height: 50px;
+        align-items: center;
+        padding-left: 100px;
+        padding-right: 100px;
+}
