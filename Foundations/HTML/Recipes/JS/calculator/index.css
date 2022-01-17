@@ -5,10 +5,8 @@ body{
 }
 
 .content{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 700px;
+        height: 100vh;
+        width: 100vw;
         flex-direction: column;
         display: flex;
         justify-content: center;
@@ -16,11 +14,13 @@ body{
 }
 
 .calculator{
-        margin-top: 100px;
         background-color: #aaa;
         border: 2px solid #333;
         border-radius: 15px;
         padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
 }
 
 .calculator-display{
