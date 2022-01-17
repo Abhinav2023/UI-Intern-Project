@@ -1,22 +1,26 @@
 let row=prompt("Please enter number of rows",16);
 let column=prompt("Please enter number of columns",16);
 
-console.log(row);
-console.log(column);
-var div=document.createElement("div");
-div.addEventListener("mouseover",function(){
-        console.log("Change Background");
-        div.classList.add('hoverEffect');
-},false);
-div.classList.add("mystyle");
-div.style.border="1px solid black";
+let $gridItem = document.createElement("div");
+$gridItem.className="grid-item";
 
-var rowDiv=document.createElement("div");
-rowDiv.classList.add("row");
-for(let i=0;i<column;i++){
-        rowDiv.appendChild(div.cloneNode(true));
+function gridItemMouseOverHandler(){
+        console.log("Change Background");
+        this.classList.add('grid-item__hover');
 }
-let element=document.querySelector('.content');
-for(let i=0;i<row;i++){
-        element.appendChild(rowDiv.cloneNode(true));
+
+function createRowAndColumn(){
+        let $grid=document.querySelector('.content');
+        for(let i=0;i<row;i++){
+                let $gridRow=document.createElement("div");
+                $gridRow.classList.add("grid-row");
+                for(let i=0;i<column;i++){
+                        let $clone=$gridItem.cloneNode(true);
+                        $clone.addEventListener('mouseover',gridItemMouseOverHandler);
+                        $gridRow.appendChild($clone);
+                }
+                $grid.appendChild($gridRow);
+        }
 }
+
+createRowAndColumn();
