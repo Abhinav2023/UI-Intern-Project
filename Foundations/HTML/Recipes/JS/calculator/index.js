@@ -1,7 +1,7 @@
 let firstNumber='',
     secondNumber='',
     currentOperation=null;
-
+let numberChange=false;
 let numbers=document.querySelectorAll('[data-number]');
 let operations=document.querySelectorAll('[data-operator]');
 let clearButton=document.querySelector('.btn-red');
@@ -21,8 +21,9 @@ operations.forEach(operation=>{
 
 
 function appendNumber(number){
-        if(screen.textContent==='0'){
+        if(screen.textContent==='0' || numberChange){
                 screen.textContent='';
+                numberChange=false;
         }
         screen.textContent+=number;
 }
@@ -31,24 +32,33 @@ function appendOperation(operation){
         if(operation==='.'){
                 appendPoint();
         }else if(operation==='='){
-                equalsOperation();
-        }else{
-                equalsOperation(operation);
+                evaluate();
+                numberChange=true;
+        }else if(operation==='%'){
+                screen.textContent=screen.textContent/100;
+        }
+        else{
+                performOperation(operation);
+                numberChange=true;
         }
 }
 
-function equalsOperation(operator){
+function performOperation(operator){
         if(currentOperation!==null) evaluate();
         firstNumber=screen.textContent;
         currentOperation=operator;
-        screen.textContent='';
+        
 }
 
 function evaluate(){
         secondNumber=screen.textContent;
-        document.querySelector('.screen').textContent='ihbd';
-        // document.querySelector('.screen').textContent=findResult(firstNumber,secondNumber,currentOperation);
-        console.log(findResult(firstNumber,secondNumber,currentOperation))
+        if(currentOperation==='/' && screen.textContent==='0'){
+                alert("Divide by 0 not possible");
+                clearScreen();
+                return ;
+        }
+        document.querySelector('.screen').textContent=findResult(firstNumber,secondNumber,currentOperation).toFixed(3);
+        //console.log(findResult(firstNumber,secondNumber,currentOperation))
         currentOperation=null;
 }
 
